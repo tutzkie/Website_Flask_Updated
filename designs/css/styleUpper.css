@@ -1,0 +1,116 @@
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/Kuzan1.gif');
+    color:black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 20%;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-image: url('/static/images/Usopp1.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.navbar:hover {
+    height: 400px;
+}
+
+.navbar:hover .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 1.5em;
+}
+
+.navbar .nav-links li {
+    padding: 5px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar .nav-links li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.navbar .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+    color: white;
+}
+
+.centered-content {
+    text-align: center;
+    margin: 50px auto 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: block;
+    width: fit-content;
+}
+
+.centered-content form {
+    display: block;
+    text-align: left;
+}
+
+.go-back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: transparent;
+    color: #000000;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
