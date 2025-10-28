@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Works | DATA STRUCTURES AND ALGORITHMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/Strawhat1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/styleWorks.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">DATA STRUCTURES AND ALGORITHMS | WORKS</div>
+        <ul class="nav-links">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="welcome">
+            <h1>TAKE A LOOK AT MY PROGRAMMING WORKS</h1>
+            <p>They definitely work for reals</p>
+        </section>
+
+        <section class="cards-container">
+            <div class="card">
+                <a href="/touppercase">
+                    <img src="{{ url_for('static', filename='images/Letter1.gif') }}" alt="touppercase">
+                    <div class="card-label">LOWERCASE TO UPPERCASE</div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="/areaofcircle">
+                    <img src="{{ url_for('static', filename='images/AceCircle1.gif') }}" alt="areaofcircle">
+                    <div class="card-label">FIND THE AREA OF A CIRCLE</div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="/areaoftriangle">
+                    <img src="{{ url_for('static', filename='images/Triangle1.gif') }}" alt="areaoftriangle">
+                    <div class="card-label">FIND THE AREA OF A TRIANGLE</div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="/lists">
+                    <img src="{{ url_for('static', filename='images/lists1.gif') }}" alt="lists">
+                    <div class="card-label">CREATE A LINKED LIST MANAGER</div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="/stacks">
+                    <img src="{{ url_for('static', filename='images/convert1.gif') }}" alt="stacks">
+                    <div class="card-label">INFIX TO POSTFIX CONVERTER</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Franzen Bisaya Society. All rights reserved.</p>
+    </footer>
+</body>
+</html>

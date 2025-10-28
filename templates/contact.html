@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile | DATA STRUCTURES AND ALGORITHMS</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/Strawhat1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/styleContact.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">DATA STRUCTURES AND ALGORITHMS | CONTACT</div>
+        <ul class="nav-links">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contact-information">
+            <h1>My Contact Information</h1>
+            <p>📧Personal Email: hectortroytutol@gmail.com</p>
+            <p>📧School Email: hectortroymtutol@iskolarngbayan.edu.pup.ph</p>
+            <p><img src="{{ url_for('static', filename='images/Github1.png') }}" alt="GitHub Logo" width="20" height="20"> Github: tutzkie</p>
+            <p><img src="{{ url_for('static', filename='images/Facebook1.png') }}" alt="Facebook Logo" width="20" height="20"> Facebook: Hector Troy Marable Tutol</p>
+            <p><img src="{{ url_for('static', filename='images/Instagram1.png') }}" alt="Instagram Logo" width="20" height="20"> Instagram: @tutzkiebabes</p>
+            <p>📱Phone Number: 0961-434-7806</p>
+            <p>🏡Location: Taytay Rizal</p>
+        </section>
+    </main>
+    <a href="{{ url_for('static', filename='images/Job1.png') }}" target="_blank" class="click-button">Click Here</a>
+
+    <a href="/" class="go-back-button">Go Back</a>
+
+    <footer>
+        <p>&copy; 2025 Franzen Bisaya Society. All rights reserved.</p>
+    </footer>
+</body>
+</html>

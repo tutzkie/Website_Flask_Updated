@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area of Circle | DATA STRUCTURES AND ALGORITHMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/Strawhat1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/styleCircle.css') }}">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">DATA STRUCTURES AND ALGORITHMS | AREA OF CIRCLE</div>
+        <ul class="nav-links">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="centered-content">
+        <h1>Area of a Circle Calculator</h1>
+
+        <form action="/areaofcircle" method="post">
+            <label for="radius">Enter radius:</label>
+            <input type="number" id="radius" name="radius" step="any" required>
+            <input type="submit" value="Calculate">
+        </form>
+
+        {% if area is not none %}
+        <p>Area of the circle: {{ area }}</p>
+        {% endif %}
+    </div>
+
+    <a href="/works" class="go-back-button">Go Back</a>
+
+    <footer>
+        <p>&copy; 2025 Franzen Bisaya Society. All rights reserved.</p>
+    </footer>
+</body>
+</html>

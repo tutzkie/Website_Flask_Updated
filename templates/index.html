@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | DATA STRUCTURES AND ALGORITHMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/Strawhat1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/styleIndex.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">DATA STRUCTURES AND ALGORITHMS</div>
+        <ul class="nav-links">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="welcome">
+            <h1>Welcome! Take A Look At My Information and Programming Works!</h1>
+            <p>Glad You're Here!</p>
+        </section>
+
+        <section class="cards-container">
+            <div class="card">
+                <a href="/profile">
+                    <img src="{{ url_for('static', filename='images/Luffy2.gif') }}" alt="Profile">
+                    <div class="card-label">PROFILE</div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="/works">
+                    <img src="{{ url_for('static', filename='images/Franky1.gif') }}" alt="Works">
+                    <div class="card-label">WORKS</div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="/contact">
+                    <img src="{{ url_for('static', filename='images/Chopper1.gif') }}" alt="Contacts">
+                    <div class="card-label">CONTACTS</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Franzen Bisaya Society. All rights reserved.</p>
+    </footer>
+</body>
+</html>
