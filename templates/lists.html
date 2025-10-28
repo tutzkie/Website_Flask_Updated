@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lists | DATA STRUCTURES AND ALGORITHMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/Strawhat1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/designs/css/styleLists.css') }}">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">DATA STRUCTURES AND ALGORITHMS | LINKED LISTS</div>
+        <ul class="nav-links">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="centered-content">
+        <h1>Linked List Manager</h1>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <h2>Current List:</h2>
+        <div class="list-box">
+            <ul>
+                {% for item in current_list %}
+                    <li>{{ item }}</li>
+                {% else %}
+                    <li>[List is Empty]</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <form class="controls" method="POST" action="/lists">
+            <label for="data_input">Data:</label>
+            <input type="text" id="data_input" name="data_input" 
+                   placeholder="Enter data to add or remove by value...">
+            
+            <br><br>
+
+            {% for item in current_list %}
+                <input type="hidden" name="list_item" value="{{ item }}">
+            {% endfor %}
+
+            <button type="submit" name="action" value="insert_beg" class="btn-control">
+                Insert at Beginning
+            </button>
+            <button type="submit" name="action" value="insert_end" class="btn-control">
+                Insert at End
+            </button>
+            <button type="submit" name="action" value="remove_at" class="btn-control btn-danger">
+                Remove at
+            </button>
+            <button type="submit" name="action" value="remove_beg" class="btn-control btn-danger">
+                Remove from Beginning
+            </button>
+            <button type="submit" name="action" value="remove_end" class="btn-control btn-danger">
+                Remove from End
+            </button>
+        </form>
+    </div>
+
+    <a href="/works" class="go-back-button">Go Back</a>
+
+    <footer>
+        <p>&copy; 2025 Franzen Bisaya Society. All rights reserved.</p>
+    </footer>
+</body>
+</html>

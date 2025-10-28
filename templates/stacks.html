@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacks | DATA STRUCTURES AND ALGORITHMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/Strawhat1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/designs/css/styleStacks.css') }}">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">DATA STRUCTURES AND ALGORITHMS | INFIX TO POSTFIX</div>
+        <ul class="nav-links">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="centered-content">
+        <h1>Infix to Postfix Converter</h1>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form class="controls" method="POST" action="/stacks">
+            <h2>Enter Expression</h2>
+            <p>Use spaces between all tokens (e.g., A + B * C)</p>
+            
+            <label for="infix_input">Infix Expression:</label>
+            <input type="text" id="infix_input" name="infix_input" 
+                   placeholder="e.g., ( A + B ) * C"
+                   value="{{ infix_expression }}">
+            
+            <br><br>
+
+            <button type="submit" name="action" value="convert" class="btn-control">
+                Convert to Postfix
+            </button>
+        </form>
+
+        {% if postfix_expression %}
+            <h2>Result:</h2>
+            <div class="list-box">
+                <p><strong>Infix:</strong> {{ infix_expression }}</p>
+                <p><strong>Postfix:</strong> {{ postfix_expression }}</p>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <a href="/works" class="go-back-button">Go Back</a>
+
+    <footer>
+        <p>&copy; 2025 Franzen Bisaya Society. All rights reserved.</p>
+    </footer>
+</body>
+</html>
